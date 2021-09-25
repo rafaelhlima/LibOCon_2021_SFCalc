@@ -35,6 +35,6 @@ Soon the video will be made available on [TDF's YouTube channel](https://www.you
 
 ## Download the Presentation File
 
-The presentation file was created using LibreOffice Impress 7.2. Since it uses multiple columns in shapes, it will only open correctly if you use LibreOffice 7.2 or greater.
+The presentation file ([download ODP here](./Presentation.odp)) was created using LibreOffice Impress 7.2. Since it uses multiple columns in shapes, it will only open correctly if you use LibreOffice 7.2 or greater.
 
-I also made the PDF available for those who are not using LibreOffice 7.2.
+I also made the [PDF](./Presentation.pdf) available for those who are not using LibreOffice 7.2.
