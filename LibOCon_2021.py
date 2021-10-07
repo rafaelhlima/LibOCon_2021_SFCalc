@@ -1,3 +1,38 @@
+'''
+Module to demonstrate SourceForge Methods in the Calc Service	
+	
+Activate	in create_sheet_example
+ClearAll	in clear_contents_v1
+ClearFormats	in clear_contents_v2
+ClearValues	in clear_contents_v3
+CopySheet	in copy_sheet_example
+CopySheetFromFile	in copy_from_file_example
+CopyToCell	in copy_cells_v1
+CopyToRange	in copy_cells_v2
+DAvg	in calculate_average
+DCount	see Davg
+DMax	see Davg
+DMin	see Davg
+DSum	see Davg
+Forms	
+GetColumnName	see GetValue
+GetFormula	see GetValue
+GetValue	in mark_invalid
+ImportFromCSVFile	in open_csv_file_v1
+ImportFromDatabase	see ImportFromCSVFile
+InsertSheet	in create_sheet_example
+MoveRange	see CopyToRange
+MoveSheet	see InsertSheet 
+Offset	in create_random_matrix_v1
+RemoveSheet	in remove_sheet_example
+RenameSheet	see InsertSheet 
+SetArray	in create_random_matrix_v2
+SetValue	in create_random_matrix_v1
+SetCellStyle	in mark_invalid
+SetFormula	see SetValue
+SortRange	'''
+
+
 from scriptforge import CreateScriptService
 import random as rnd
 
@@ -159,4 +194,26 @@ def open_csv_file_v3(args=None):
     filter_option = "59,34,UTF-8,1"
     doc.ImportFromCSVFile("/home/rafael/Documents/JobData_v2.csv", "A1", filter_option)
 
-g_exportedScripts = (create_random_matrix_v1, create_random_matrix_v2, create_random_matrix_v3, create_random_matrix_v4, clear_region_a1, mark_invalid, create_values_for_example_2, clear_contents_v1, clear_contents_v2, clear_contents_v3, copy_cells_v1, copy_cells_v2, copy_range_from_file, create_sheet_example, copy_sheet_example, remove_sheet_example, copy_from_file_example, calculate_average, open_csv_file_v1, open_csv_file_v2, open_csv_file_v3)
+g_exportedScripts = (
+    create_random_matrix_v1,
+    create_random_matrix_v2,
+    create_random_matrix_v3,
+    create_random_matrix_v4,
+    clear_region_a1,
+    mark_invalid,
+    create_values_for_example_2,
+    clear_contents_v1,
+    clear_contents_v2,
+    clear_contents_v3,
+    copy_cells_v1,
+    copy_cells_v2,
+    copy_range_from_file,
+    create_sheet_example,
+    copy_sheet_example,
+    remove_sheet_example,
+    copy_from_file_example,
+    calculate_average,
+    open_csv_file_v1,
+    open_csv_file_v2,
+    open_csv_file_v3,
+	)
