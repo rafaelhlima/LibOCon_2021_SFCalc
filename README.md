@@ -18,7 +18,7 @@ On **Windows** machines, the folder is:
 
 On **macOS** machines, the folder is:
 
-`/Applications/LibreOffice.app/Contents/Resources/Scripts/python`
+`/Users/user/Library/Application Support/LibreOffice/4/user/Scripts/python`
 
 Read [this help page](https://help.libreoffice.org/latest/en-US/text/sbasic/python/python_locations.html) to learn more about where Python scripts are located.
 
