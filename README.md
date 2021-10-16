@@ -10,11 +10,15 @@ The macros were created as user scripts. To be able to run them, the file LibOCo
 
 On **Linux** machines, the folder is:
 
-`/home/user/.config/4/user/Scripts/python/` (if it does not exist, create it)
+`/home/user/.config/libreoffice/4/user/Scripts/python/` (if it does not exist, create it)
 
 On **Windows** machines, the folder is:
 
 `%APPDATA%\LibreOffice\4\user\Scripts\python`
+
+On **macOS** machines, the folder is:
+
+`/Users/user/Library/Application Support/LibreOffice/4/user/Scripts/python`
 
 Read [this help page](https://help.libreoffice.org/latest/en-US/text/sbasic/python/python_locations.html) to learn more about where Python scripts are located.
 
