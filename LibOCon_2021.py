@@ -35,6 +35,7 @@ SortRange	'''
 
 from scriptforge import CreateScriptService
 import random as rnd
+import pathlib
 
 # Creates a 6x6 matrix starting at A1
 def create_random_matrix_v1(args=None):
@@ -169,7 +170,8 @@ def remove_sheet_example(args=None):
 # Copies sheet from another file (open or closed)
 def copy_from_file_example(args=None):
     doc = CreateScriptService("Calc")
-    doc.copySheetFromFile("/home/rafael/Documents/DataSource.ods", "Sheet2", "Copy_Sheet2")
+    wb = str(pathlib.Path.home().joinpath("Documents", "DataSource.ods"))
+    doc.copySheetFromFile(wb, "Sheet2", "Copy_Sheet2")
 
 # Example using the DAvg method
 def calculate_average(args=None):
@@ -181,18 +183,21 @@ def calculate_average(args=None):
 # Open CSV file JobData_v1.csv using default configuration
 def open_csv_file_v1(args=None):
     doc = CreateScriptService("Calc")
-    doc.ImportFromCSVFile("/home/rafael/Documents/JobData_v1.csv", "A1")
+    csvfile = str(pathlib.Path.home().joinpath("Documents", "JobData_v1.csv"))
+    doc.ImportFromCSVFile(csvfile, "A1")
 
 # Open CSV file JobData_v2.csv using default configuration
 def open_csv_file_v2(args=None):
     doc = CreateScriptService("Calc")
-    doc.ImportFromCSVFile("/home/rafael/Documents/JobData_v2.csv", "A1")
+    csvfile = str(pathlib.Path.home().joinpath("Documents", "JobData_v2.csv"))
+    doc.ImportFromCSVFile(csvfile, "A1")
 
 # Open CSV file using custom configuration
 def open_csv_file_v3(args=None):
     doc = CreateScriptService("Calc")
+    csvfile = str(pathlib.Path.home().joinpath("Documents", "JobData_v2.csv"))
     filter_option = "59,34,UTF-8,1"
-    doc.ImportFromCSVFile("/home/rafael/Documents/JobData_v2.csv", "A1", filter_option)
+    doc.ImportFromCSVFile(csvfile, "A1", filter_option)
 
 g_exportedScripts = (
     create_random_matrix_v1,
