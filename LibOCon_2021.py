@@ -168,8 +168,10 @@ def remove_sheet_example(args=None):
 
 # Copies sheet from another file (open or closed)
 def copy_from_file_example(args=None):
+    doc_url = XSCRIPTCONTEXT.getDocument().getURL()
+    wb = CreateScriptService("FileSystem").GetParentFolderName(doc_url) + "DataSource.ods"
     doc = CreateScriptService("Calc")
-    doc.copySheetFromFile("/home/rafael/Documents/DataSource.ods", "Sheet2", "Copy_Sheet2")
+    doc.copySheetFromFile(wb, "Sheet2", "Copy_Sheet2")
 
 # Example using the DAvg method
 def calculate_average(args=None):
@@ -180,19 +182,25 @@ def calculate_average(args=None):
 
 # Open CSV file JobData_v1.csv using default configuration
 def open_csv_file_v1(args=None):
+    doc_url = XSCRIPTCONTEXT.getDocument().getURL()
+    csvfile = CreateScriptService("FileSystem").GetParentFolderName(doc_url) + "JobData_v1.csv"
     doc = CreateScriptService("Calc")
-    doc.ImportFromCSVFile("/home/rafael/Documents/JobData_v1.csv", "A1")
+    doc.ImportFromCSVFile(csvfile, "A1")
 
 # Open CSV file JobData_v2.csv using default configuration
 def open_csv_file_v2(args=None):
+    doc_url = XSCRIPTCONTEXT.getDocument().getURL()
+    csvfile = CreateScriptService("FileSystem").GetParentFolderName(doc_url) + "JobData_v2.csv"
     doc = CreateScriptService("Calc")
-    doc.ImportFromCSVFile("/home/rafael/Documents/JobData_v2.csv", "A1")
+    doc.ImportFromCSVFile(csvfile, "A1")
 
 # Open CSV file using custom configuration
 def open_csv_file_v3(args=None):
+    doc_url = XSCRIPTCONTEXT.getDocument().getURL()
+    csvfile = CreateScriptService("FileSystem").GetParentFolderName(doc_url) + "JobData_v2.csv"
     doc = CreateScriptService("Calc")
     filter_option = "59,34,UTF-8,1"
-    doc.ImportFromCSVFile("/home/rafael/Documents/JobData_v2.csv", "A1", filter_option)
+    doc.ImportFromCSVFile(csvfile, "A1", filter_option)
 
 g_exportedScripts = (
     create_random_matrix_v1,
